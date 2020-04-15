@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from temperature import views as temp_views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', temp_views.temperature, name='temperature'),
 ]

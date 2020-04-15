@@ -1,0 +1,14 @@
+{% extends 'temperature/base.html' %}
+{% block content %}
+<div class="container">
+    <form method="get">
+        <input type="number" name="value">
+        <button type="submit">Adicionar</button>
+    </form>
+    {% for temperature in temperatures %}
+    <ul class="list-group">
+        <li class="list-group-item">{{temperature.type}} = {{temperature.value}}</li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %}
